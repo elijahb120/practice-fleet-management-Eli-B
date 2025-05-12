@@ -27,7 +27,7 @@ information.
 */
 
 class Vehicle {
-    constructor(type,make,model,year,milage) {
+    constructor(type,make,model,year,milage = 0) {
         this.type = type;
         this.make = make;
         this.model = model;
@@ -39,14 +39,14 @@ class Vehicle {
          return this.milage ;
     }
     getDetails() {
-        return `This vehicle is a ${this.year} ${this.make} ${this.model} ${this.type}, and has ${this.milage}, miles.`
+        return `This vehicle is a ${this.year} ${this.make} ${this.model} ${this.type}, and has ${this.milage} miles.`
     }
 }
 
 let ford = new Vehicle('Van','Ford', 'Econoline', 2003, 170854);
-let volvo = new Vehicle('Suv', 'Volvo','XC90', 2009, 145960);
+let volvo = new Vehicle('Suv', 'Volvo','XC90', 2009,);
 let honda = new Vehicle('Compact Car','Honda','Fit', 2007,90782 )
 
 console.log("Milage: ", ford.drive(10), ford.getDetails())
-console.log("Milage: ",volvo.drive(10), volvo.getDetails())
-console.log("Milage: ",honda.drive(10), honda.getDetails())
+console.log("Milage: ",volvo.drive(20), volvo.getDetails())
+console.log("Milage: ",honda.drive(25), honda.getDetails())
